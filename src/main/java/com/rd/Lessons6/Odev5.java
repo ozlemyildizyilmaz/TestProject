@@ -15,11 +15,10 @@ public class Odev5 {
         int gunluk = 750;
         int primMiktari = 1000;
         int toplamMaas = gunSayisi * gunluk;
+        int fazlaGun = gunSayisi - 25;
+        int prim= (fazlaGun > 0) ? fazlaGun * primMiktari : 0;
+        toplamMaas +=prim;
 
-        if (gunSayisi > 25) {
-            int fazlaGun = gunSayisi - 25;
-            toplamMaas += fazlaGun * primMiktari;
-        }
         return toplamMaas;
     }
 
